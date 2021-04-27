@@ -1,0 +1,281 @@
+$colorFuente: rgba(19, 99, 39, 0.904);
+$colorFuenteHover: rgba(0, 0, 255, 0.548);
+$background-color:  radial-gradient(circle, rgba(148,158,233,0.95) 24%, rgba(174,238,198,0.95) 88%, rgba(174,238,232,0.95) 92%);
+$tamanioPequenio: 1rem;
+$tamanioMediano: 1.75rem;
+$tamanioGrande: 2.5rem;
+$tamanioXL: 3rem;
+$margenSuperior: 3%;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #f3f3f3;
+    background-repeat: repeat;
+
+}
+
+
+.slideFormasPagoHeader{
+    color: $colorFuente;
+    padding-top: 1%;
+    font-weight: bold;
+}
+
+.bordesRedondeados{
+    border-radius: 25px;
+}
+
+
+/* -----ESTILOS DEL HEADER Y MENU */
+
+.background-gradient{
+    background: $background-color;
+}
+.navbar-green-text a{
+    color: $colorFuente;
+    font-weight: bold;
+}
+.custom-toggler-color.navbar-toggler {
+    border: 3px solid rgb(130,130,255);
+}
+.custom-toggler-color .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(130,130,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* -----ESTILOS DEL FOOTER */
+footer{
+
+    ul{
+        color: $colorFuente;
+        text-decoration: none;
+        font-size: $tamanioPequenio;
+        font-weight: bold;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2vh;
+    }
+        li{
+            display: flex;
+            flex:1;
+
+            &:hover{
+                color: $colorFuenteHover;
+            }
+        }
+            a{
+                text-decoration: none;
+                color: $colorFuente;
+                display: flex;
+                flex:1;
+
+                &:hover{
+                    color: $colorFuenteHover;  
+                }
+            }
+}
+
+
+/*-----FORMATOS DE TITULOS Y SUBTITULOS-----*/
+
+h1, h2, h3{
+    color: $colorFuente;
+    margin-top: $margenSuperior;
+}
+
+/*-----FORMATO DEL INDEX------*/
+
+#videoResponsive{
+    max-width: 100%;
+}
+
+.index{
+    &__titulo{
+        font-size: $tamanioXL;
+    }
+    &__subtitulo{
+        font-size: $tamanioMediano;
+    }
+    &__parrafo{
+        font-weight: italic;
+    }
+    &__lista{
+
+        &__item{
+            list-style-type: square;    
+        }
+    }
+    &__novedades{
+        font-weight: bold;
+        padding: 2%;
+        margin-top: 2%;
+    }   
+
+    #modalUbicacion img{
+        // max-width: 100%;
+        @extend #videoResponsive;
+    }
+}
+
+
+#slideImagenesIndex .carousel-indicators [data-bs-target]{
+    background-color: black;
+}
+
+
+/* ------FORMATO DE PRODUCTOS---- */
+
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.producto{
+    // margin-left: 5%;
+    // margin-right: 5%;
+
+    &__titulo{
+        animation-name: aparecer;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+}
+
+.productoUno, .productoDos, .productoTres, .productoCuatro, .productoCinco{
+
+    justify-content: center;
+
+}
+
+// .productoUno{
+//         &__lista{
+//             list-style-type: circle;
+//         }
+
+// }
+// .productoDos{
+//     &__lista{
+//         list-style-type: disc;
+//     }
+
+// }
+
+// .productoTres{
+//     &__lista{
+//         list-style-type: square;
+//     }
+
+// }
+// .productoCuatro{
+//     &__lista{
+//         list-style-type:lower-greek;
+//     }
+
+// }
+// .productoCinco{
+//     &__lista{
+//         list-style-type:lower-roman;
+//     }
+
+// }
+
+@mixin productos ($color, $vinietas){
+    color: $color;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: $vinietas;
+
+}
+
+.productoUno{
+    &__lista{
+        @include productos (rgba(0, 0, 255, 0.473), circle);
+    }
+
+}
+.productoDos{
+    &__lista{
+        @include productos (rgb(6, 171, 226), square);
+}
+
+}
+
+.productoTres{
+    &__lista{
+        @include productos (rgb(131, 75, 117), lower-greek);
+}
+
+}
+.productoCuatro{
+    &__lista{
+        @include productos (rgb(75, 111, 131), lower-roman);
+}
+
+}
+.productoCinco{
+    &__lista{
+        @include productos (rgb(236, 11, 48), lower-greek);
+}
+
+}
+
+
+/*------FORMATO DE TABLA DE TALLES----*/
+
+.talles{
+
+    &__titulo{
+        font-size: $tamanioGrande;
+        margin-top: $margenSuperior;
+    }
+
+    &__subtitulo{
+        font-size: $tamanioMediano;
+    }
+
+    &__img{
+        border: 5px solid lightblue;
+        border-radius: 25px 25px;
+    }
+
+    &__tabla{
+        border-collapse: collapse;
+    }
+
+    th, tr, td{
+    border: 2px dotted rgb(7, 156, 56);
+    text-align: center; 
+    }
+}
+
+
+/*------FORMATO DE POLITICA DE CAMBIOS----*/
+
+.politica{
+
+    &__titulo{
+        // font-size: $tamanioGrande;
+        // margin-top: $margenSuperior;
+        @extend .talles__titulo;
+    }
+
+    &__texto{
+        justify-content: center;
+
+    }
+    &__opciones{
+        list-style-type:lower-greek;
+    }
+
+}
