@@ -100,7 +100,7 @@ h1, h2, h3 {
 .productoUno, .productoDos, .productoTres, .productoCuatro, .productoCinco {
   justify-content: center; }
 
-.productoUno__lista {
+/* .productoUno__lista {
   color: rgba(0, 0, 255, 0.473);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   list-style-type: circle; }
@@ -123,7 +123,7 @@ h1, h2, h3 {
 .productoCinco__lista {
   color: #ec0b30;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  list-style-type: lower-greek; }
+  list-style-type: lower-greek; } */
 
 /*------FORMATO DE TABLA DE TALLES----*/
 .talles__titulo, .politica__titulo {
