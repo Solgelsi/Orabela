@@ -207,6 +207,10 @@ h1, h2, h3{
 
 }
 
+.faq{
+    margin-bottom: 2%;
+}
+
 /*------FORMATO DE MEDIOS DE PAGO----*/
 
 .pagos{
@@ -230,3 +234,10 @@ h1, h2, h3{
 
 
 }
+
+// @media screen and (max-width: 480px) {
+//         $tamanioPequenio: 1.5rem;
+//         $tamanioMediano: 2.25rem;
+//         $tamanioGrande: 3rem;
+//         $tamanioXL: 3.5rem;
+// }
