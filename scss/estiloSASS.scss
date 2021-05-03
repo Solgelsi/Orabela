@@ -11,7 +11,7 @@ $margenSuperior: 3%;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Original Surfer', cursive;
 }
 
 body{
@@ -83,11 +83,10 @@ footer{
 }
 
 
-/*-----FORMATOS DE TITULOS Y SUBTITULOS-----*/
+/*-----FORMATOS DE TITulOS Y SUBTITulOS-----*/
 
 h1, h2, h3{
     color: $colorFuente;
-    margin-top: $margenSuperior;
 }
 
 /*-----FORMATO DEL INDEX------*/
@@ -99,6 +98,7 @@ h1, h2, h3{
 .index{
     &__titulo{
         font-size: $tamanioXL;
+        margin-top: $margenSuperior;
     }
     &__subtitulo{
         font-size: $tamanioMediano;
@@ -107,15 +107,13 @@ h1, h2, h3{
         font-weight: italic;
     }
     &__lista{
+        list-style-type: none;
 
-        &__item{
-            list-style-type: square;    
-        }
     }
     &__novedades{
         font-weight: bold;
         padding: 2%;
-        margin-top: 2%;
+        margin-top: $margenSuperior;
     }   
 
     #modalUbicacion img{
@@ -142,13 +140,12 @@ h1, h2, h3{
 }
 
 .producto{
-    // margin-left: 5%;
-    // margin-right: 5%;
 
     &__titulo{
         animation-name: aparecer;
         animation-duration: 1s;
         animation-iteration-count: infinite;
+        margin-top: $margenSuperior;
     }
 
 }
@@ -157,76 +154,9 @@ h1, h2, h3{
 
     justify-content: center;
 
-}
-
-// .productoUno{
-//         &__lista{
-//             list-style-type: circle;
-//         }
-
-// }
-// .productoDos{
-//     &__lista{
-//         list-style-type: disc;
-//     }
-
-// }
-
-// .productoTres{
-//     &__lista{
-//         list-style-type: square;
-//     }
-
-// }
-// .productoCuatro{
-//     &__lista{
-//         list-style-type:lower-greek;
-//     }
-
-// }
-// .productoCinco{
-//     &__lista{
-//         list-style-type:lower-roman;
-//     }
-
-// }
-
-@mixin productos ($color, $vinietas){
-    color: $color;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    list-style-type: $vinietas;
-
-}
-
-.productoUno{
     &__lista{
-        @include productos (rgba(0, 0, 255, 0.473), circle);
+        list-style-type: circle;
     }
-
-}
-.productoDos{
-    &__lista{
-        @include productos (rgb(6, 171, 226), square);
-}
-
-}
-
-.productoTres{
-    &__lista{
-        @include productos (rgb(131, 75, 117), lower-greek);
-}
-
-}
-.productoCuatro{
-    &__lista{
-        @include productos (rgb(75, 111, 131), lower-roman);
-}
-
-}
-.productoCinco{
-    &__lista{
-        @include productos (rgb(236, 11, 48), lower-greek);
-}
 
 }
 
@@ -249,12 +179,11 @@ h1, h2, h3{
         border-radius: 25px 25px;
     }
 
-    &__tabla{
-        border-collapse: collapse;
+    th{
+        color: $colorFuente;
     }
 
     th, tr, td{
-    border: 2px dotted rgb(7, 156, 56);
     text-align: center; 
     }
 }
@@ -265,8 +194,6 @@ h1, h2, h3{
 .politica{
 
     &__titulo{
-        // font-size: $tamanioGrande;
-        // margin-top: $margenSuperior;
         @extend .talles__titulo;
     }
 
@@ -275,7 +202,31 @@ h1, h2, h3{
 
     }
     &__opciones{
-        list-style-type:lower-greek;
+        list-style-type: circle;
     }
+
+}
+
+/*------FORMATO DE MEDIOS DE PAGO----*/
+
+.pagos{
+
+    &__titulo{
+        font-size: $tamanioGrande;
+        margin-top: $margenSuperior;
+    }
+
+    &__lista{
+        list-style-type:none;
+        
+        &__Inferior{
+            list-style-type:square;
+        }
+        &__Parrafo{
+            font-style: italic;
+        }
+
+    }
+
 
 }
