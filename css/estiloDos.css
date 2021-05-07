@@ -56,6 +56,9 @@ footer a {
   footer a:hover {
     color: rgba(0, 0, 255, 0.548); }
 
+.copyright {
+  color: rgba(19, 99, 39, 0.904); }
+
 /*-----FORMATOS DE TITulOS Y SUBTITulOS-----*/
 h1, h2, h3 {
   color: rgba(19, 99, 39, 0.904); }
